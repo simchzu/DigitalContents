@@ -1,0 +1,321 @@
+body {
+    font-family: 'Noto Serif KR', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    justify-content: center;
+}
+nav .title {
+    position: absolute;
+    font-size: 24px;
+    left: 50%;
+    transform: translateX(-50%);  
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    color: #ddd;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.header img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.section {
+    display: flex;
+    align-items: center; /* Center items horizontally */
+    height: 100%;
+    max-width: 1100px;
+    margin: 0 auto; /* Center container horizontally */
+    justify-content: space-between;
+}
+
+.calendar-section, .details-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.calendar-section {
+    width: 45%;
+}
+
+.details-section {
+    width: 45%;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-nav button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.calendar-nav button:hover {
+    background-color: #666;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+}
+
+#calendar div {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#calendar div:hover {
+    background-color: #999;
+}
+
+#selectedDate {
+    font-size: 1.2em;
+}
+
+#new-note {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin-top: 20px;
+}
+
+#new-note:hover {
+    background-color: #666;
+}
+
+.note-item {
+    background-color: #f7f7f7;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* 내용 가운데 정렬 */
+}
+
+.modal-content img {
+    max-width: 100%;
+    max-height: 400px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: block;
+}
+
+.note-date {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.note img {
+    max-width: 100%;
+    max-height: 150px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.title-input {
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    width: 90%;
+    height: 80px;
+    padding: 10px;
+    font-size: 13px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.image-preview-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 280px;
+}
+
+.note-image-preview img{
+    max-width: 100%;
+    max-height: 500px; /* 초기 이미지 높이 */
+    border-radius: 5px;
+    cursor: pointer; /* 클릭 가능하게 설정 */
+}
+
+.note-image-preview {
+    max-width: 100%;
+    max-height: 500px; /* 초기 이미지 높이 */
+    border-radius: 5px;
+    cursor: pointer; /* 클릭 가능하게 설정 */
+}
+
+#prev-image {
+    left: 10px;
+}
+
+#next-image {
+    right: 10px;
+}
+
+.image-nav-button, .delete-image-button {
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 5px;
+    z-index: 1;
+}
+
+
+.image-nav-button:hover, .delete-image-button:hover {
+    background-color: #666;
+}
+
+#note-image-preview {
+    display: none;
+    max-width: 100%;
+    max-height: 200px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete-image-button {
+    position: absolute;
+    top: 0px;
+    left: 80%;
+}
+
+button#save-note, button#delete-note {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button#save-note:hover, button#delete-note:hover {
+    background-color: #666;
+}

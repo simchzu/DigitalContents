@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+    <link rel="stylesheet" href="Mypage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Exercise.html">Exercise</a></li>
+                <li><a href="Routine.html">Routine</a></li>
+                <li><a href="Calendar.html">Calendar</a></li>
+                <li><a href="Graph.html">Graph</a></li>
+            </ul>
+            <div class="title"><a href="new.html">Today's Exercise</a></div>
+            <ul>
+                <li><a href="Mypage.html">Mypage</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="header">
+            <img src="mypage.png">
+            <h1>Mypage</h1>
+        </div>
+        <div class="section">
+             <div class="mypage-section">
+                <h2>내 정보</h2>
+                <p>기본 정보를 입력해주세요</p>
+                    <form id="form1">
+                        <label for="name">이름</label>
+                        <input type="text" id="name" name="name">
+
+                        <label for="gender">성별</label>
+                        <div class="gender-options">
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">남성</label>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">여성</label>
+                        </div>
+
+                        <label for="birthdate">생년월일</label>
+                        <input type="date" id="birthdate" name="birthdate">
+
+                        <label for="height">키 (cm)</label>
+                        <input type="number" id="height" name="height">
+
+                        <label for="weight">체중 (kg)</label>
+                        <input type="number" id="weight" name="weight">
+
+                        <label for="goal-weight">목표 체중 (kg)</label>
+                        <input type="number" id="goal-weight" name="goal-weight">
+
+                        <div class="button-container">
+                            <button type="button" id="form1SaveButton">Save</button>
+                            <button type="button" id="form1ResetButton">Reset</button>
+                        </div>
+                    </form>
+                </div>
+            <div class="activity-section">
+                <h2>평소 활동량</h2>
+                <form id="activityForm">
+                    <div class="activity-option">
+                        <input type="radio" id="very-low" name="activity" value="very-low">
+                        <label for="very-low">
+                            <img src="very-low.png" alt="매우 적음">
+                            <div class="text">
+                                <p>매우 적음</p>
+                                <p>활동이 거의 없는 집돌이 집순이</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="activity-option">
+                        <input type="radio" id="low" name="activity" value="low">
+                        <label for="low">
+                            <img src="low.png" alt="적음">
+                            <div class="text">
+                                <p>적음</p>
+                                <p>주로 앉아있는 학생이나 직장인</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="activity-option">
+                        <input type="radio" id="medium" name="activity" value="medium">
+                        <label for="medium">
+                            <img src="medium.png" alt="보통">
+                            <div class="text">
+                                <p>보통</p>
+                                <p>주 2~3회 정도 운동하는 꾸준러</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="activity-option">
+                        <input type="radio" id="high" name="activity" value="high">
+                        <label for="high">
+                            <img src="high.png" alt="많음">
+                            <div class="text">
+                                <p>많음</p>
+                                <p>매일 뛰거나 운동하는 갓생러</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="activity-option">
+                        <input type="radio" id="very-high" name="activity" value="very-high">
+                        <label for="very-high">
+                            <img src="very-high.png" alt="매우 많음">
+                            <div class="text">
+                                <p>매우 많음</p>
+                                <p>육체 노동 혹은 운동 관련 직업인</p>
+                            </div>
+                        </label>
+                    </div>
+                    <button type="button" id="activityFormSaveButton">Save</button>
+                </form>
+            </div>
+        </div>
+    <script src="Mypage.js"></script>
+</body>
+</html>

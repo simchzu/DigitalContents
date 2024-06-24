@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="Calendar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Exercise.html">Exercise</a></li>
+                <li><a href="Routine.html">Routine</a></li>
+                <li><a href="Calendar.html">Calendar</a></li>
+                <li><a href="Graph.html">Graph</a></li>
+            </ul>
+            <div class="title"><a href="new.html">Today's Exercise</a></div>
+            <ul>
+                <li><a href="Mypage.html">Mypage</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="header">
+            <img src="calendar.png" alt="Calendar Image">
+            <h1>Calendar</h1>
+        </div>
+        <div class="section">
+            <div class="calendar-section">
+                <div class="calendar-header">
+                    <h2><span id="currentDate"></span></h2>
+                    <div class="calendar-nav">
+                        <button id="prevMonth">&lt;</button>
+                        <button id="nextMonth">&gt;</button>
+                        <button id="today">Today</button>
+                    </div>
+                </div>
+                <div id="calendar"></div>
+            </div>
+            <div class="details-section">
+                <h2 id="selectedDate">날짜</h2>
+                <button id="new-note">메모 작성</button>
+                <div id="note-list"></div>
+            </div>
+        </div>
+    </div>
+    <div id="note-modal" class="modal">
+        <div class="modal-content">
+            <div class="note-date" id="note-date"></div>
+            <input type="text" id="note-title" placeholder="제목" class="title-input">
+            <textarea id="note-content" placeholder="내용"></textarea>
+            <input type="file" id="note-image" accept="image/*" multiple>
+            <div class="image-preview-container">
+                <button id="prev-image" class="image-nav-button">&lt;</button>
+                <img id="note-image-preview" class="note-image-preview" alt="Image Preview">
+                <button id="next-image" class="image-nav-button">&gt;</button>
+                <button id="delete-image" class="delete-image-button">이미지 삭제</button>
+            </div>
+            <div class="button-container">
+                <button id="save-note">저장</button>
+                <button id="delete-note">삭제</button>
+            </div>
+        </div>
+    </div>
+    <script src="Calendar.js"></script>
+</body>
+</html>

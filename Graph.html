@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph</title>
+    <link rel="stylesheet" href="Graph.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+    <script defer src="Graph.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Exercise.html">Exercise</a></li>
+                <li><a href="Routine.html">Routine</a></li>
+                <li><a href="Calendar.html">Calendar</a></li>
+                <li><a href="Graph.html">Graph</a></li>
+            </ul>
+            <div class="title"><a href="new.html">Today's Exercise</a></div>
+            <ul>
+                <li><a href="Mypage.html">Mypage</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="header">
+            <img src="graph.png">
+            <h1>Graph</h1>
+        </div>
+        <div class="content">
+            <div class="input-container">
+                <label for="date">날짜</label>
+                <input type="date" id="date">
+                <label for="weight">몸무게 (kg)</label>
+                <input type="number" id="weight">
+                <label for="bodyFat">체지방량 (%)</label>
+                <input type="number" id="bodyFat">
+                <label for="muscleMass">근육량 (kg)</label>
+                <input type="number" id="muscleMass">
+                <button onclick="addData()">+</button>
+            </div>
+            <div id="chart-container">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

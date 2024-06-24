@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memo</title>
+    <link rel="stylesheet" href="Memo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Exercise.html">Exercise</a></li>
+                <li><a href="Routine.html">Routine</a></li>
+                <li><a href="Calendar.html">Calendar</a></li>
+                <li><a href="Graph.html">Graph</a></li>
+                <li><a href="Memo.html">Memo</a></li>
+            </ul>
+            <div class="title"><a href="new.html">Today's Exercise</a></div>
+            <ul>
+                <li><a href="Mypage.html">Mypage</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="header">
+            <img src="memo.png">
+            <h1>Memo</h1>
+            <input type="text" id="search" placeholder="메모 검색">
+        </div>
+        <main>
+            <div id="note-list"></div>
+            <button id="new-note">Write</button>
+        </main>
+    </div>
+
+    <div id="note-modal" class="modal">
+        <div class="modal-content">
+            <div class="note-date" id="note-date"></div>
+            <input type="text" id="note-title" placeholder="Title" class="title-input">
+            <textarea id="note-content" placeholder=""></textarea>
+            <input type="file" id="note-image" accept="image/*" multiple>
+            <div class="image-preview-container">
+                <button id="prev-image" class="image-nav-button">&lt;</button>
+                <img id="note-image-preview" class="note-image-preview">
+                <button id="next-image" class="image-nav-button">&gt;</button>
+                <button id="delete-image" class="delete-image-button">Delete</button>
+            </div>
+            <div class="button-container">
+                <button id="save-note">Save</button>
+                <button id="delete-note">Delete</button>
+            </div>
+        </div>
+    </div>
+    <script defer src="Memo.js"></script>
+</body>
+</html>

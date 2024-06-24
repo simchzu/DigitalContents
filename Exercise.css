@@ -1,0 +1,125 @@
+body {
+    font-family: 'Noto Serif KR', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    justify-content: center;
+}
+
+nav .title {
+    position: absolute;
+    font-size: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    color: #ddd;
+}
+
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f0f0f0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+#current-date {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+td input[type="checkbox"] {
+    margin: 0;
+}
+
+td input, td select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    text-align: center;
+}

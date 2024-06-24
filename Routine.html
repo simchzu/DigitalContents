@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Routine</title>
+    <link rel="stylesheet" href="Routine.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Exercise.html">Exercise</a></li>
+                <li><a href="Routine.html">Routine</a></li>
+                <li><a href="Calendar.html">Calendar</a></li>
+                <li><a href="Graph.html">Graph</a></li>
+            </ul>
+            <div class="title"><a href="new.html">Today's Exercise</a></div>
+            <ul>
+                <li><a href="Mypage.html">Mypage</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="header">
+            <img src="routine.png">
+            <h1>Routine</h1>
+        </div>
+        <div class="weekdays">
+            <button onclick="showRoutine('monday')">Monday</button>
+            <button onclick="showRoutine('tuesday')">Tuesday</button>
+            <button onclick="showRoutine('wednesday')">Wednesday</button>
+            <button onclick="showRoutine('thursday')">Thursday</button>
+            <button onclick="showRoutine('friday')">Friday</button>
+            <button onclick="showRoutine('saturday')">Saturday</button>
+            <button onclick="showRoutine('sunday')">Sunday</button>
+        </div>
+        <div class="content">
+            <div id="routine-form">
+                <label for="exercise-type">운동 종류:</label>
+                <select id="exercise-type" onchange="toggleCustomExercise()">
+                    <option value="헬스">헬스</option>
+                    <option value="유산소">유산소</option>
+                    <option value="요가">요가</option>
+                    <option value="필라테스">필라테스</option>
+                    <option value="크로스핏">크로스핏</option>
+                    <option value="기타">기타</option>
+                </select>
+                <input type="text" id="custom-exercise" placeholder="운동 종류 입력" style="display:none;">
+                <label for="exercise-name">운동 이름:</label>
+                <input type="text" id="exercise-name" placeholder="운동 이름 입력">
+                <label for="exercise-count">개수:</label>
+                <input type="number" id="exercise-count" placeholder="개수 입력">
+                <label for="exercise-sets">세트 수:</label>
+                <select id="exercise-sets">
+                    <option value="1">1세트</option>
+                    <option value="2">2세트</option>
+                    <option value="3">3세트</option>
+                    <option value="4">4세트</option>
+                    <option value="5">5세트</option>
+                    <option value="6">6세트</option>
+                    <option value="7">7세트</option>
+                    <option value="8">8세트</option>
+                    <option value="9">9세트</option>
+                    <option value="10">10세트</option>
+                </select>
+                <label for="exercise-hours">시간:</label>
+                <input type="number" id="exercise-hours" placeholder="몇 시간">
+                <label for="exercise-minutes">분:</label>
+                <input type="number" id="exercise-minutes" placeholder="몇 분">
+                <button onclick="addRoutine()">+</button>
+            </div>
+            <div id="routine-list-container">
+                <ul id="routine-list">
+                    <!-- 루틴 목록 추가 -->
+                </ul>
+                <div class="buttons">
+                    <button id="edit-button" onclick="enableEditMode()">Edit</button>
+                    <button id="delete-button" onclick="enableDeleteMode()">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script defer src="Routine.js"></script>
+</body>
+</html>

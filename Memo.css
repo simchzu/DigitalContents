@@ -1,0 +1,273 @@
+body {
+    font-family: 'Noto Serif KR', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    justify-content: center;
+}
+
+nav .title {
+    position: absolute;
+    font-size: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    color: #ddd;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.header img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.header input {
+    padding: 8px;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+#note-list {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.note {
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(33.333% - 10px);
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.note p {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.note img {
+    max-width: 100%;
+    max-height: 150px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 80vh;
+}
+
+.modal-content img {
+    max-width: 100%;
+    max-height: 200px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: block;
+}
+
+.modal-content textarea {
+    width: 100%;
+    height: 50%;
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-top: 15px;
+}
+
+.modal-content input[type="file"] {
+    margin-top: 10px;
+    height: 40px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.button-container button {
+    flex: 1;
+}
+
+.note-date {
+    align-self: flex-start;
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.note-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.note-content {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+#note-image-preview {
+    display: none;
+    max-width: 100%;
+    max-height: 200px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.image-preview-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+}
+
+.image-nav-button {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#prev-image {
+    left: 10px;
+}
+
+#next-image {
+    right: 10px;
+}
+
+.delete-image-button {
+    position: absolute;
+    top: 0px;
+    left: 83%;
+    transform: translateX(90%);
+    background-color: rgb(103, 103, 103);
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    padding: 6px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.title-input {
+    border: none;
+    border-bottom: 1px solid #333;
+    width: 100%;
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.title-input:focus {
+    outline: none;
+}
